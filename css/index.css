@@ -118,11 +118,14 @@ nav.menu a:hover{
   padding-right: 1rem;
   padding: 1rem;
   font-weight: 700;
+  transition:  0.3s ease;
 }
 
 #contacto:hover{
- transform: scale(1.1,1.1);
-  transition: 0.1s;
+  transform: scale(1,1);
+  color: white;
+  background-color: var(--dark);
+  border-bottom: none;
 }
 
 /* HERO */
@@ -224,10 +227,12 @@ nav.menu a:hover{
   text-align: center;
   opacity: 0.95;
 }
-/*Secciones*/
+/* =====================
+   SECCIÓN GENERAL
+===================== */
 .seccion {
-  padding: 80px 20px;
-  background: #fff;
+  padding: 90px 20px;
+  background: #ffffff;
 }
 
 .seccion .container {
@@ -235,62 +240,106 @@ nav.menu a:hover{
   margin: 0 auto;
 }
 
-/*Descripcion area*/
-.descripcion h2{
-  font-size:35px;
+/* =====================
+   TÍTULO PRINCIPAL
+===================== */
+.descripcion > .container > h2 {
+  font-size: 3rem;
+  line-height: 1.3;
   text-align: center;
   color: var(--color-principal);
+  font-weight: 700;
+  margin-bottom: 4rem;
+  font-family: Oswald, Montserrat, Arial;
 }
 
-.catalogo-container{
+/* =====================
+   LAYOUT
+===================== */
+.catalogo-container {
   display: flex;
-  flex-direction: row;
-
-  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
 }
 
-.catalogo-container img{
-  width: 60%;
-  height: 30rem;
-  border-radius: 1rem 1rem 1rem 30%;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+/* =====================
+   IMAGEN
+===================== */
+.catalogo-container img {
+  width: 55%;
+  max-height: 32rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 1rem 20%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.catalogo-descripcion{
+/* =====================
+   DESCRIPCIÓN
+===================== */
+.catalogo-descripcion {
+  width: 45%;
   display: flex;
   flex-direction: column;
+  gap: 1.4rem;
   align-items: flex-start;
-  padding: 2rem;
 }
-.catalogo-descripcion h2{
-  text-align: start;
-  margin: 0;
-  padding: 0;
+
+/* Título interno */
+.catalogo-descripcion h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
   color: var(--dark);
+  line-height: 1.3;
+  margin-top: 0;
 }
 
-.catalogo-descripcion img{
-  height: 5rem;
-  border-radius: 0.3rem;
-  box-shadow: none;
-}
-
-#explorar{
-  background-color: var(--color-principal);
-  color: white;
-  padding: 1rem 1.5rem 1rem 1.5rem;
-  font-size: 2rem;
-  font-weight: 700;
-  border-radius: 1rem;
-  text-align: center;
+/* Logo INFY */
+#infy{
+  font-weight: 800;
   cursor: pointer;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-  transition: 0.6s;
 }
-#explorar:hover{
+#infy:hover{
   color: var(--color-principal);
-  background-color: white;
-  border: 2px solid var(--color-principal)
+  border-bottom: 1px solid var(--color-principal);
+}
+
+/* Subtítulo */
+.catalogo-descripcion h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Texto descriptivo */
+.catalogo-descripcion p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 90%;
+}
+
+/* =====================
+   BOTÓN
+===================== */
+#explorar {
+  margin-top: 1.5rem;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.9rem 2.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 0.6rem;
+  background-color: var(--color-principal);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#explorar:hover {
+  background-color: #fff;
+  color: var(--color-principal);
+  border: 1px solid var(--color-principal);
 }
 
 /* Services area */
@@ -361,6 +410,7 @@ nav.menu a:hover{
 
 /* WhatsApp bubble */
 .whatsapp {
+  cursor: pointer;
   position: fixed;
   right: 22px;
   bottom: 22px;
@@ -385,6 +435,147 @@ nav.menu a:hover{
 .muted {
   color: #6b7280;
   font-size: 14px;
+}
+
+/* ---------- FOOTER BASE ---------- */
+.site-footer{
+  background: var(--color-principal);
+  color: var(--dark);
+  padding: 48px 20px 24px;
+  box-sizing: border-box;
+}
+
+/* contenedor centrado */
+.footer-inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr 320px;
+  gap: var(--gap);
+  align-items: start;
+}
+
+/* columna del logo */
+.logo-col .footer-logo{
+  display: block;
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: none;
+}
+
+.tagline{
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 220px;
+}
+
+/* encabezado contacto */
+.contact-col h4{
+  color: var(--bright);
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+/* lista correos */
+.contact-list,
+.right-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.contact-list a{
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.contact-list a:hover{
+  color: var(--bright);
+  text-decoration: underline;
+}
+
+/* icon wrapper: usa color acento */
+.contact-list .icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  min-width: 20px;
+}
+
+/* columna derecha (teléfonos y redes) */
+.right-col .right-item{
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.right-col .label{
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.right-col .value{
+  margin-top: 6px;
+  color: var(--bright);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.right-col a{
+  color: var(--bright);
+  text-decoration: none;
+}
+
+.right-col a:hover{
+  text-decoration: underline;
+}
+
+/* separador y footer bottom */
+.footer-sep{
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.03);
+  margin: 22px auto 18px;
+  max-width: var(--maxw);
+}
+
+.footer-bottom{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 4px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer-bottom .copyright{
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* partner pequeño a la derecha */
+.partner-logo{
+  height: 36px;
+  object-fit: contain;
+  opacity: 0.95;
 }
 
 /* Responsive */
