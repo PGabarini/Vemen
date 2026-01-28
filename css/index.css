@@ -106,7 +106,7 @@ nav.menu a {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url("imagenes/autoelectrico.jpg") center / cover no-repeat;
+  background: url("../imagenes/autoelectrico.jpg") center / cover no-repeat;
 }
 
 .hero__overlay {
