@@ -1,0 +1,339 @@
+:root {
+  --color-principal: #117f4e;
+  --green: #0d1d11;
+  --dark: #0f1720;
+  --accent: #f7a92d;
+  --maxw: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat, system-ui, Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: #fff;
+}
+
+/* Top thin green line like the screenshot */
+.top-line {
+  height: 6px;
+  background: var(--color-principal)
+}
+
+header.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--color-principal);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav-row {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: var(--color-principal);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 36px;
+}
+
+nav.menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.name-company{
+    font-size: 2rem;
+}
+
+nav.menu a {
+  font-size: 14px;
+  text-decoration: none;
+  color:white;
+  letter-spacing: 0.6px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.actions a {
+  font-size: 14px;
+  color: var(--green);
+  text-decoration: none;
+}
+
+#contacto{
+  background-color: white;
+  color: var(--dark);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding: 0.7rem;
+  font-weight: 700;
+}
+
+#contacto:hover{
+ transform: scale(1.1,1.1);
+
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url("imagenes/autoelectrico.jpg") center / cover no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 10, 15, 0.55) 0%,
+    rgba(5, 10, 15, 0.25) 40%,
+    rgba(5, 10, 15, 0.55) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: var(--maxw);
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 40px;
+  padding-top: 5rem;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-family: Oswald, Montserrat, Arial;
+  color: #fff;
+  font-size: 90px;
+  margin: 0;
+  line-height: 0.85;
+  letter-spacing: 1.7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  
+}
+.vemen {
+  font-weight: 700;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-principal) 0%,
+    white 50%,
+    var(--color-principal) 100%
+  );
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation: reflejo 6s linear infinite;
+}
+
+@keyframes reflejo {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+.hero p{
+    color: var(--dark);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.hero .pager {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 38px;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.pager .dots {
+  width: 90px;
+  text-align: center;
+  opacity: 0.95;
+}
+
+/* Services area */
+.services {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.services .container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 48px;
+  margin: 6px 0 40px;
+  font-weight: 700;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* left column with vertical words */
+.qualities {
+  padding: 30px 20px;
+}
+
+.qualities .title {
+  font-family: Oswald;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.qualities .big {
+  font-family: Oswald;
+  font-size: 34px;
+  margin: 6px 0 20px;
+}
+
+.qualities .accent {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* right column lists */
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.service-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 6px;
+}
+
+.service-item::before {
+  content: "➤";
+  display: inline-block;
+  font-size: 18px;
+  color: var(--dark);
+  min-width: 28px;
+}
+
+.service-item p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* WhatsApp bubble */
+.whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 80;
+}
+
+.whatsapp svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+/* small helpers */
+.muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .hero {
+    height: 420px;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .qualities {
+    order: 2;
+  }
+
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-row {
+    padding: 10px;
+  }
+
+  nav.menu {
+    display: none;
+  }
+
+  .hero {
+    height: 360px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+}
