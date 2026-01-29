@@ -223,23 +223,6 @@ nav.menu a:hover{
 }
 
 
-.hero .pager {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 38px;
-  color: #fff;
-  font-size: 14px;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.pager .dots {
-  width: 90px;
-  text-align: center;
-  opacity: 0.95;
-}
 /* =====================
    SECCIÓN GENERAL
 ===================== */
