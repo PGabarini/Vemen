@@ -1,31 +1,45 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+const fondosHero = [
+            "imagenes/autoelectrico.png",
+            "imagenes/autoelectrico2.png",
+            "imagenes/autoelectrico3.png"
+        ];
+let i = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+
 
     const herobg = document.getElementsByClassName('hero__bg')[0]
     if(herobg){
-        cambiarPager(herobg)
-    }else{
-        console.log("no hay")
+        const topHero = document.querySelector('.layer.top');
+        const bottomHero = document.querySelector('.layer.bottom');
+        cambiarImagen(fondosHero,bottomHero,topHero)
     }
-    
+
 
 });
 
-const fondos = ["imagenes/autoelectrico2.png","imagenes/autoelectrico.png"]
-let turnoFondo = 0
 
-function cambiarPager(herobg){
-    
 
-    setInterval(()=>{
+
+
+function cambiarImagen(lista,bottom,top){
+
+    bottom.style.backgroundImage = `url(${lista[0]})`;
+
+    setInterval(() => {
+
+        i = (i + 1) % lista.length;
+
+        top.style.backgroundImage = `url(${lista[i]})`;
+        top.style.opacity = 1;
         
 
-        fondoactual =  fondos[turnoFondo]
+        setTimeout(() => {
+            bottom.style.backgroundImage = top.style.backgroundImage;
+            top.style.opacity = 0;
+            top.style.transform = 'scale(1)';
+        }, 1200);
 
-        herobg.style.background = `url(${fondoactual}) center / cover no-repeat`;
-
-        turnoFondo = (turnoFondo + 1) % fondos.length
-
-        
-    },3000)
+    }, 5000);
 }

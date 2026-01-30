@@ -1,7 +1,7 @@
 :root {
   --color-principal: #117f4e;
   --color-secundario:#083a65;
-  --green: #0d1d11;
+  --green: #276435;
   --dark: #0f1720;
   --accent: #f7a92d;
   --maxw: 1200px;
@@ -28,7 +28,7 @@ body {
 /* Top thin green line like the screenshot */
 .top-line {
   height: 6px;
-  background: var(--dark)
+  background: var(--color-principal)
 }
 
 header.main-header {
@@ -147,14 +147,26 @@ nav.menu a:hover{
   height: 600px;
   overflow: hidden;
   border-radius: 0 0 20% 0 ;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 28px rgba(0,0,0,0.35);
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url("../imagenes/autoelectrico.png") center / cover no-repeat;
 }
+
+.hero__bg .layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.2s ease, transform 6s ease;
+}
+
+.hero__bg .layer.top {
+  opacity: 0;
+}
+
 
 .hero__overlay {
   position: absolute;
