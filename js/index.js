@@ -10,10 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const herobg = document.getElementsByClassName('hero__bg')[0]
+
     if(herobg){
-        const topHero = document.querySelector('.layer.top');
-        const bottomHero = document.querySelector('.layer.bottom');
-        cambiarImagen(fondosHero,bottomHero,topHero)
+
+        const preload = fondosHero.map(src => {
+                return new Promise(resolve => {
+                    const img = new Image();
+                    img.src = src;
+                    img.onload = resolve;
+                });
+            });
+
+            
+        Promise.all(preload).then(() => {
+            const topHero = document.querySelector('.layer.top');
+            const bottomHero = document.querySelector('.layer.bottom');
+            cambiarImagen(fondosHero,bottomHero,topHero)
+            })
     }
 
 
