@@ -1,0 +1,26 @@
+.prodsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.prodContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    gap: 2rem;
+}
+
+.infoProd{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgProd img{
+    width: 30rem;
+    height: auto;
+    border-radius: 0.4rem;
+
+}
