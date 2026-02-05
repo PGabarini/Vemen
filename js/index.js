@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const herobg = document.getElementsByClassName('hero__bg')[0]
 
     if(herobg){
-
-        const preload = fondosHero.map(src => {
+        const fondosExtra = fondosHero.slice(1)
+        const preload = fondosExtra.map(src => {
                 return new Promise(resolve => {
                     const img = new Image();
                     img.src = src;
