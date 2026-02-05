@@ -1,0 +1,129 @@
+/* Tip: pega esto en un archivo .css o en un <style> en tu HTML */
+
+/* Google Font (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.spec-section {
+  /* fondo oscuro tipo gradiente como el de la imagen de referencia */
+  background: linear-gradient(180deg, #041027 0%, #021226 100%);
+  padding: 64px 20px 96px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #fff;
+}
+
+/* contenedor centrado */
+.spec-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título grande centrado */
+.spec-title {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 26px;
+  letter-spacing: -0.5px;
+}
+
+/* Pill (modelo) centrado */
+.model-pill {
+  display: inline-block;
+  background: #ffffff;
+  color: #093042;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  position: relative;
+  margin-bottom: 46px;
+  /* sombra/contorno sutil que recuerda al anillo del diseño */
+  box-shadow:
+    0 0 0 6px rgba(4,18,36,0.12),
+    0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* tarjeta principal con bordes redondeados y sombra */
+.spec-card {
+  margin: 0 auto;
+  background: #0b2236; /* tono azul-noche intermedio */
+  border-radius: 22px;
+  padding: 34px 30px;
+  box-shadow: 0 18px 50px rgba(2,7,18,0.6);
+  text-align: left;
+}
+
+/* heading dentro de la tarjeta */
+.card-heading {
+  color: #00e0c2; /* turquesa brillante */
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 18px;
+  padding-left: 8px;
+}
+
+/* contenedor de filas */
+.spec-rows {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* cada fila */
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 28px 28px;
+  border-top: 1px solid rgba(255,255,255,0.03); /* separador sutil */
+}
+
+/* primera fila no necesita borde superior visual - opcional */
+.spec-row:first-child {
+  border-top: none;
+}
+
+/* etiqueta (columna izquierda) */
+.spec-key {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/* valor (columna derecha) */
+.spec-value {
+  text-align: right;
+  color: #c6d3df;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Espaciado y aspecto en pantallas más pequeñas */
+@media (max-width: 900px) {
+  .spec-title { font-size: 44px; margin-bottom: 18px; }
+  .model-pill { margin-bottom: 28px; padding: 10px 22px; }
+  .spec-card { padding: 22px 18px; }
+  .card-heading { font-size: 20px; margin-bottom: 12px; }
+
+  .spec-row {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 20px 12px;
+  }
+
+  .spec-value { text-align: left; margin-top: 8px; }
+}
+
+/* versión móvil muy pequeña */
+@media (max-width: 420px) {
+  .spec-title { font-size: 34px; }
+  .spec-key { font-size: 16px; }
+  .spec-value { font-size: 15px; }
+  .model-pill { padding: 8px 16px; font-size: 13px; }
+}
