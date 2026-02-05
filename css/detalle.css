@@ -1,9 +1,13 @@
-/* Tip: pega esto en un archivo .css o en un <style> en tu HTML */
+
 
 /* Google Font (opcional) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.prod30{
+    background-image: url('../imagenes/cargadores.png');
+}
 
 .spec-section {
   /* fondo oscuro tipo gradiente como el de la imagen de referencia */
