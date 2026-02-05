@@ -1,9 +1,12 @@
 
 /* --- Cabecera con Imagen de Fondo --- */
+
+
+
 .page-header {
     position: relative;
-    height: 350px;
-    background-image: url('../imagenes/cargadoresElectricos.jpg');
+    height: 400px;
+    
     background-size: cover;
     background-position: center;
     display: flex;
@@ -14,7 +17,9 @@
     background-color: white;
     border-radius:  0 0 10% 10%;
 }
-
+.contactHeader{
+    background-image: url('../imagenes/contacto.png');
+}
 
 
 .header-content {

@@ -510,7 +510,7 @@ nav.menu a:hover{
     
 }
 .tagline{
-  color: var(--muted);
+  color: white;
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
@@ -519,7 +519,7 @@ nav.menu a:hover{
 
 /* encabezado contacto */
 .contact-col h4{
-  color: var(--bright);
+  color: white;
   margin: 0 0 1rem 0;
   font-size: 1.3rem;
   font-weight: 600;
