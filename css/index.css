@@ -1,7 +1,7 @@
 :root {
   --color-principal: #117f4e;
   --color-secundario:#083a65;
-  --green: #276435;
+  --green: #139158;
   --dark: #0f1720;
   --accent: #f7a92d;
   --maxw: 1200px;
@@ -27,8 +27,44 @@ body {
 
 /* Top thin green line like the screenshot */
 .top-line {
-  height: 6px;
-  background: var(--color-principal)
+  height: auto;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.top-line p{
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+.icon.top{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.topGroup{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.topGroup div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.top-line img{
+  height: 1rem;
 }
 
 header.main-header {
