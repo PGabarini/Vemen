@@ -9,6 +9,10 @@
     background-image: url('../imagenes/autoelectrico3.png');
 }
 
+.prod60{
+    background-image: url('../imagenes/autoeelectricoCargador60.png');
+}
+
 .spec-section {
   /* fondo oscuro tipo gradiente como el de la imagen de referencia */
 
@@ -22,6 +26,20 @@
   max-width: 1250px;
   margin: 0 auto;
   text-align: center;
+}
+.productIntroduction{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.productIntroduction h3, .productIntroduction p{
+  color: var(--dark);
+  
+}
+.productIntroduction p{
+  text-align: start;
 }
 
 /* Título grande centrado */
@@ -37,8 +55,8 @@
 /* Pill (modelo) centrado */
 .model-pill {
   display: inline-block;
-  background: #ffffff;
-  color: #093042;
+  background: var(--dark);
+  color: white;
   padding: 12px 28px;
   border-radius: 999px;
   font-weight: 600;
@@ -46,10 +64,7 @@
   letter-spacing: 0.6px;
   position: relative;
   margin-bottom: 46px;
-  /* sombra/contorno sutil que recuerda al anillo del diseño */
-  box-shadow:
-    0 0 0 6px rgba(4,18,36,0.12),
-    0 6px 18px rgba(0,0,0,0.45);
+box-shadow: 0 18px 50px rgba(2,7,18,0.2);
 }
 
 .img-model img{
@@ -57,6 +72,7 @@
   box-shadow: 0 18px 50px rgba(2,7,18,0.6);
   width: 40rem;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 /* tarjeta principal con bordes redondeados y sombra */
@@ -115,6 +131,36 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.consultaDetalle{
+  cursor: pointer;
+  position: fixed;
+  right: 12px;
+  bottom: 22px;
+  width: 60px;
+  height: 60px;
+  border-radius: 1rem;
+  background: var(--color-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 80;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.consultaDetalle p{
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
 }
 
 /* Espaciado y aspecto en pantallas más pequeñas */
