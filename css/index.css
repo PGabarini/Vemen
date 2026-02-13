@@ -655,6 +655,15 @@ nav.menu a:hover{
 /* Responsive */
 @media (max-width: 1000px) {
 
+  .topGroup.groupRedes{
+    display: none;
+  }
+
+    .topGroup{
+    justify-content: space-around;
+    width: 80%;
+  }
+
   .nav.menu a {
     font-size: 11px;}
 
