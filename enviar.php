@@ -25,9 +25,11 @@ $mensaje
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($destinatario, $asunto, $contenido, $headers)) {
-        echo "Mensaje enviado correctamente a pgabarini@vemen.com.ar";
+        header("Location: gracias.html")
+        exit;
     } else {
-        echo "Error al enviar el mensaje";
+        header("Location: contacto.html")
+        exit;
     }
 }
 ?>
