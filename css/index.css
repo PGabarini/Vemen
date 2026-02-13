@@ -655,13 +655,15 @@ nav.menu a:hover{
 /* Responsive */
 @media (max-width: 1000px) {
 
-  #groupRedes{
-    display: none;
-  }
+
 
     .topGroup{
     justify-content: space-around;
     width: 80%;
+  }
+
+    #groupRedes{
+    display: none !important;
   }
 
   .nav.menu a {
@@ -794,7 +796,7 @@ nav.menu a:hover{
 
 
   #groupRedes{
-    display: none;
+    display: none !important;
   }
 
     .topGroup{
