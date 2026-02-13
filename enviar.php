@@ -25,10 +25,10 @@ $mensaje
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($destinatario, $asunto, $contenido, $headers)) {
-        header("Location: gracias.html")
+        header("Location: gracias.html");
         exit;
     } else {
-        header("Location: contacto.html")
+        header("Location: contacto.html");
         exit;
     }
 }
