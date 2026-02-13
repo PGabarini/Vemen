@@ -655,7 +655,7 @@ nav.menu a:hover{
 /* Responsive */
 @media (max-width: 1000px) {
 
-  .groupRedes{
+  #groupRedes{
     display: none;
   }
 
@@ -790,5 +790,15 @@ nav.menu a:hover{
 
   .hero h1 {
     font-size: 48px;
+  }
+
+
+  #groupRedes{
+    display: none;
+  }
+
+    .topGroup{
+    justify-content: space-around;
+    width: 80%;
   }
 }
