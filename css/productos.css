@@ -68,3 +68,25 @@
 color: #fff;
   border: 1px solid var(--dark);
 }
+
+@media (max-width: 1000px){
+    .prodContainer{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    .botones-producto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgProd img{
+        width: 90%;
+    }
+
+    .prodsContainer{
+        gap: 7rem;
+        padding: 3rem 0;
+    }
+}
