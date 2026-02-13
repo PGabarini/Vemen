@@ -631,27 +631,96 @@ nav.menu a:hover{
   opacity: 0.95;
 }
 
+#img-celu{
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 1000px) {
+  .hero__content{
+    justify-content: space-around;
+  }
   .hero {
     height: 420px;
+  }
+
+    .hero p{
+    display: none;
   }
 
   .hero h1 {
     font-size: 72px;
   }
 
+  .seccion{
+    padding: 20px 20px;
+  }
+
+  .catalogo-container{
+    flex-direction: column;
+  }
+
+  .catalogo-descripcion h3{
+    display: none;
+  }
+
+  .catalogo-descripcion{
+    width: 100%;
+    align-items: center;
+  }
+
+  #img-compu{
+    display: none;
+  }
+
+  #img-celu{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .qualities {
-    order: 2;
-  }
+.qualities {
+        order: 2;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
 
   .lists {
     grid-template-columns: 1fr;
   }
+
+  .footer-inner{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: start;
+}
+
+.col.logo-col{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.tagline{
+  text-align: center
+}
+  nav.menu {
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  #inicio{
+    display: none;
+  }
+
 }
 
 @media (max-width: 520px) {
@@ -659,9 +728,7 @@ nav.menu a:hover{
     padding: 10px;
   }
 
-  nav.menu {
-    display: none;
-  }
+
 
   .hero {
     height: 360px;
