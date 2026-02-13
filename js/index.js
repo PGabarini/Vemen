@@ -8,6 +8,7 @@ let i = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    marcarHeader()
 
     const herobg = document.getElementsByClassName('hero__bg')[0]
 
@@ -59,4 +60,52 @@ function cambiarImagen(lista,bottom,top){
         }, 1200);
 
     }, 5000);
+}
+
+function marcarHeader(){
+    const ventana = window.location.pathname
+    const longitud = ventana.split('/').length
+    const ventanaActual = ventana.split('/')[longitud-1]
+    
+    switch(ventanaActual){
+        case "index.html": 
+            console.log("inicio")
+            const inicio = document.getElementById('inicio')
+            inicio.classList.add('enVentana')
+            break
+
+
+        case "contacto.html":
+            console.log("contacto")
+            var contacto = document.getElementById('contacto')
+            contacto.classList.add('dentro')
+            break
+
+        case "gracias.html":
+            console.log("gracias")
+            break
+
+
+        case "productos.html":
+            console.log("productos")
+            var productos = document.getElementById('productos')
+            productos.classList.add('enVentana')
+            break
+
+        case "detalle30k.html":
+            console.log("detalle30k")
+            
+            var productos = document.getElementById('productos')
+            productos.classList.add('enVentana')            
+            break
+
+        case "detalle60k.html":
+            console.log("detalle60k")
+            console.log("productos")
+            var productos = document.getElementById('productos')
+            productos.classList.add('enVentana')            
+            break
+        
+    }
+
 }

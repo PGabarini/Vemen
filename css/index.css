@@ -143,6 +143,13 @@ nav.menu a {
   height: 100%;
 
 }
+
+nav.menu a.enVentana{
+  transform: scale(1.1,1.1);
+  border-bottom: 1px solid var(--dark);
+  color: var(--dark);
+}
+
 nav.menu a:hover{
   transform: scale(1.1,1.1);
   border-bottom: 1px solid var(--dark);
@@ -150,6 +157,7 @@ nav.menu a:hover{
   transition: 0.07s ease;
   
 }
+
 .actions {
   display: flex;
   gap: 16px;
@@ -171,6 +179,15 @@ nav.menu a:hover{
   padding: 1rem;
   font-weight: 700;
   transition:  0.3s ease;
+}
+
+#contacto.dentro{
+
+  transform: scale(1,1);
+  color: white;
+  background-color: var(--dark);
+  border-bottom: none;
+
 }
 
 #contacto:hover{
